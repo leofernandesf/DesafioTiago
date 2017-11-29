@@ -14,6 +14,7 @@ class RestService: NSObject {
     static let instance = RestService()
     
     let GIT_URL = "https://api.github.com/search/repositories?q=language:Java&sort=stars&page="
+    let PULL_REQUEST_URL = "https://api.github.com/repos/"
     
     func get(urlString: String, page: Int = 0, completion: @escaping (_ data: Data?, _ erro: String?)->()) {
         

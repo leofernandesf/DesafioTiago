@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 struct GitObject: Decodable {
-    let items: [Iten]?
+    let items: [Item]?
 }
 
-struct Iten: Decodable {
+struct Item: Decodable {
     let id: Int?
     let name: String?
     let full_name: String?

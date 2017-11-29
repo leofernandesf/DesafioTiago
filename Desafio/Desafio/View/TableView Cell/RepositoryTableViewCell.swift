@@ -19,24 +19,25 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet weak var lbUsername: UILabel!
     @IBOutlet weak var lbFullname: UILabel!
     
-    var iten: Iten? {
+    var item: Item? {
         didSet {
             self.setupView()
         }
     }
     
+    var user: User?
     
     func setupView() {
-        self.lbNameRepository.text = self.iten?.name
-        self.lbDescription.text = self.iten?.description
-        self.lbforkCount.text = self.iten?.forks_count?.description
-        self.lbStarCount.text = self.iten?.stargazers_count?.description
+        self.lbNameRepository.text = self.item?.name
+        self.lbDescription.text = self.item?.description
+        self.lbforkCount.text = self.item?.forks_count?.description
+        self.lbStarCount.text = self.item?.stargazers_count?.description
         
-        if let url = URL(string: self.iten?.owner?.avatar_url ?? "") {
+        if let url = URL(string: self.item?.owner?.avatar_url ?? "") {
             self.ivUser.image = nil
             Nuke.loadImage(with: url, into: self.ivUser)
         }
-        self.lbUsername.text = self.iten?.owner?.login
+        self.lbUsername.text = self.item?.owner?.login
         self.lbUsername.ajustFontWidth()
         self.getUserName() 
     }
@@ -57,17 +58,17 @@ class RepositoryTableViewCell: UITableViewCell {
     
     
     func getUserName() {
-        RestService.instance.get(urlString: self.iten?.owner?.url ?? "") { (data, err) in
+        RestService.instance.get(urlString: self.item?.owner?.url ?? "") { (data, err) in
             if err != nil {
                 return
             }
             
             if data != nil {
                 do {
-                    let user = try JSONDecoder().decode(User.self, from: data!)
+                    self.user = try JSONDecoder().decode(User.self, from: data!)
                     
                     DispatchQueue.main.async {
-                        self.lbFullname.text = user.name
+                        self.lbFullname.text = self.user?.name
                     }
                 } catch {
                     print(error)

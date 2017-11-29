@@ -13,10 +13,13 @@
 		A71C79C71FCCF39700C65883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71C79C61FCCF39700C65883 /* Assets.xcassets */; };
 		A71C79CA1FCCF39700C65883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71C79C81FCCF39700C65883 /* LaunchScreen.storyboard */; };
 		A71C79D61FCCF80100C65883 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79D51FCCF80100C65883 /* RestService.swift */; };
-		A71C79D91FCCFD8200C65883 /* Iten.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79D81FCCFD8200C65883 /* Iten.swift */; };
+		A71C79D91FCCFD8200C65883 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79D81FCCFD8200C65883 /* Item.swift */; };
 		A71C79DB1FCD085800C65883 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79DA1FCD085800C65883 /* RepositoryViewController.swift */; };
 		A71C79DE1FCD09A300C65883 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79DD1FCD09A300C65883 /* RepositoryTableViewCell.swift */; };
 		A71C79E01FCD13E700C65883 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79DF1FCD13E700C65883 /* Extension.swift */; };
+		A71C79E21FCE13EF00C65883 /* PullRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79E11FCE13EF00C65883 /* PullRequestViewController.swift */; };
+		A71C79E41FCE6B9E00C65883 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79E31FCE6B9E00C65883 /* PullRequest.swift */; };
+		A71C79E61FCE6EEF00C65883 /* PullRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C79E51FCE6EEF00C65883 /* PullRequestTableViewCell.swift */; };
 		A7B46C3CC0D34AC05CCB85E4 /* Pods_Desafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F352F78DC36B2C206AD627F /* Pods_Desafio.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +33,13 @@
 		A71C79C91FCCF39700C65883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A71C79CB1FCCF39700C65883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A71C79D51FCCF80100C65883 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
-		A71C79D81FCCFD8200C65883 /* Iten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iten.swift; sourceTree = "<group>"; };
+		A71C79D81FCCFD8200C65883 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A71C79DA1FCD085800C65883 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		A71C79DD1FCD09A300C65883 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		A71C79DF1FCD13E700C65883 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A71C79E11FCE13EF00C65883 /* PullRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewController.swift; sourceTree = "<group>"; };
+		A71C79E31FCE6B9E00C65883 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		A71C79E51FCE6EEF00C65883 /* PullRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestTableViewCell.swift; sourceTree = "<group>"; };
 		B132DD9958C61CC236CB6D2D /* Pods-Desafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio/Pods-Desafio.release.xcconfig"; sourceTree = "<group>"; };
 		DDF170668DA25206A529E904 /* Pods-Desafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio/Pods-Desafio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A71C79DA1FCD085800C65883 /* RepositoryViewController.swift */,
+				A71C79E11FCE13EF00C65883 /* PullRequestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,7 +136,8 @@
 		A71C79D71FCCFC5800C65883 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A71C79D81FCCFD8200C65883 /* Iten.swift */,
+				A71C79D81FCCFD8200C65883 /* Item.swift */,
+				A71C79E31FCE6B9E00C65883 /* PullRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A71C79DD1FCD09A300C65883 /* RepositoryTableViewCell.swift */,
+				A71C79E51FCE6EEF00C65883 /* PullRequestTableViewCell.swift */,
 			);
 			path = "TableView Cell";
 			sourceTree = "<group>";
@@ -284,13 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A71C79D91FCCFD8200C65883 /* Iten.swift in Sources */,
+				A71C79D91FCCFD8200C65883 /* Item.swift in Sources */,
 				A71C79C51FCCF39700C65883 /* Desafio.xcdatamodeld in Sources */,
 				A71C79E01FCD13E700C65883 /* Extension.swift in Sources */,
 				A71C79DE1FCD09A300C65883 /* RepositoryTableViewCell.swift in Sources */,
 				A71C79BD1FCCF39700C65883 /* AppDelegate.swift in Sources */,
 				A71C79DB1FCD085800C65883 /* RepositoryViewController.swift in Sources */,
+				A71C79E61FCE6EEF00C65883 /* PullRequestTableViewCell.swift in Sources */,
+				A71C79E41FCE6B9E00C65883 /* PullRequest.swift in Sources */,
 				A71C79D61FCCF80100C65883 /* RestService.swift in Sources */,
+				A71C79E21FCE13EF00C65883 /* PullRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
